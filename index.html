@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
-  <script src="https://k...content-available-to-author-only...e.com/5862eaaa58.js"></script>
+ <script src="https://kit.fontawesome.com/5862eaaa58.js"></script>
  
   <style>
  
@@ -16,13 +16,23 @@
       margin:0;
       padding:0;
     }
+body{
+height:1200vh;
+}
+    .fa-bars{
+	font-size:30px;
+        color:black;
+
+    }
+
     .navbar{
+      position:fixed;
       width:100%;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       padding:6px 0;
       display:flex;
       max-height:35px;
- 
+      background-color:lightgreen;
       overflow:hidden;
       transition:max-height 1s ease-in-out;
     }
@@ -32,11 +42,16 @@
     }
     .nav-logo{
       width:40%;
+      margin-top:3px;
     }
-    .nav-logo img{
-      width:100px;
-      height:30px;
-      margin-left:50px;
+  .bar{
+ cursor:pointer;
+}
+    .nav-logo .fa-accusoft{
+	font-size:35px;
+        color:#eb074f;
+      margin-left:40px;
+      
  
     }
     .nav-items ul{
@@ -44,12 +59,13 @@
       height:auto;
       display:flex;
       justify-content:space-between;
+      margin-top:2px;
       margin-right:40px;
  
     }
     .nav-items ul li{
       list-style-type:none;
-      
+      border-radius:4px;
       padding: 6px 12px;
       margin-right:10px;
     }
@@ -57,14 +73,18 @@
       background-color:orange;
       border-radius:3px;
     }
+.nav-items ul li:hover a{
+  color:white;
+}
     .nav-items ul li a{
       text-decoration:none;
       font-family:arial;
       color:black;
+      font-size:18px;
     }
     .sign-in{
-      background-color:lightblue;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      background-color:white;
+      box-shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
  
     }
     @media only screen and (max-width:760px){
@@ -97,10 +117,7 @@
       margin:10px 0;
       }
     }
-    .bar{
-      border:2px solid black;
-      cursor:pointer;
-    }
+    
     .height{
       height:150px;
     }
@@ -110,10 +127,10 @@
  <div class="navbar" id="navbar">
    <div class="nav-logo">
      <div class="img-box">
-       <img src="https://e...content-available-to-author-only...c.com/images?q=tbn:ANd9GcR4S0s4YpITjjwQ3oCRI-EHLPwgOHoCEl-3Kg&usqp=CAU" alt="">
+       <i class="fab fa-accusoft"></i>
      
      </div>
-     <div id="bar-btn" class="bar" hidden>Click Me</div>
+     <div id="bar-btn" class="bar" hidden><i class="fas fa-bars"></i></div>
    </div>
    <div class="nav-items">
  
@@ -126,6 +143,7 @@
      </ul>
    </div>
   </div>
+
   <script>
     const bar=document.getElementById('bar-btn');
     bar.addEventListener("click",responsive);
