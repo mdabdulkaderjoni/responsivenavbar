@@ -1,0 +1,146 @@
+
+ 
+<!DOCTYPE html>
+
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://k...content-available-to-author-only...e.com/5862eaaa58.js"></script>
+ 
+  <style>
+ 
+    *{
+      margin:0;
+      padding:0;
+    }
+    .navbar{
+      width:100%;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      padding:6px 0;
+      display:flex;
+      max-height:35px;
+ 
+      overflow:hidden;
+      transition:max-height 1s ease-in-out;
+    }
+    .nav-items{
+      width:60%;
+ 
+    }
+    .nav-logo{
+      width:40%;
+    }
+    .nav-logo img{
+      width:100px;
+      height:30px;
+      margin-left:50px;
+ 
+    }
+    .nav-items ul{
+      transition:height 0.8s ease-in-out;
+      height:auto;
+      display:flex;
+      justify-content:space-between;
+      margin-right:40px;
+ 
+    }
+    .nav-items ul li{
+      list-style-type:none;
+      
+      padding: 6px 12px;
+      margin-right:10px;
+    }
+    .nav-items ul li:hover{
+      background-color:orange;
+      border-radius:3px;
+    }
+    .nav-items ul li a{
+      text-decoration:none;
+      font-family:arial;
+      color:black;
+    }
+    .sign-in{
+      background-color:lightblue;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ 
+    }
+    @media only screen and (max-width:760px){
+      .navbar{
+        display:block;
+      }
+      .nav-items{
+      width:100%;
+ 
+    }
+    .nav-logo{
+      width:100%;
+      display:flex;
+      margin-bottom:20px;
+     }
+      .bar{
+        display:block;
+      }
+      .img-box{
+        width:80%;
+      }
+      .nav-items ul{
+      display:block;
+        margin:0;
+
+ 
+    }
+    .nav-items ul li{
+      text-align:center;
+      margin:10px 0;
+      }
+    }
+    .bar{
+      border:2px solid black;
+      cursor:pointer;
+    }
+    .height{
+      height:150px;
+    }
+  </style>
+</head>
+<body>
+ <div class="navbar" id="navbar">
+   <div class="nav-logo">
+     <div class="img-box">
+       <img src="https://e...content-available-to-author-only...c.com/images?q=tbn:ANd9GcR4S0s4YpITjjwQ3oCRI-EHLPwgOHoCEl-3Kg&usqp=CAU" alt="">
+     
+     </div>
+     <div id="bar-btn" class="bar" hidden>Click Me</div>
+   </div>
+   <div class="nav-items">
+ 
+     <ul id="ul">
+       <li><a href="#">Home</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Recipie</a></li>
+       <li><a href="#">Contact</a></li>
+       <li class="sign-in"><a href="#" >Sign-in</a></li>
+     </ul>
+   </div>
+  </div>
+  <script>
+    const bar=document.getElementById('bar-btn');
+    bar.addEventListener("click",responsive);
+    function responsive(){
+      const navbar=document.getElementById('navbar').style
+    
+      navbar.maxHeight=navbar.maxHeight=="35px"?"300px":"35px";
+    }
+    responsive();
+  </script>
+</body>
+</html>
+ 
+
+
+
+
+
